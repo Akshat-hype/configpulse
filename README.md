@@ -107,3 +107,5 @@ configpulse/
 ├── .gitignore                                       # Files and folders excluded from Git (node_modules, .env, etc.)
 └── README.md                                        # Project overview, setup instructions, and usage guide
 ```
+
+<img src='./architecture_diagram 1.png'>
