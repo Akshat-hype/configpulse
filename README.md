@@ -109,3 +109,31 @@ configpulse/
 ```
 
 <img src='./architecture_diagram 1.png'>
+
+
+#Backend run &test
+
+# 1 — Install missing dep (cors)
+cd server
+npm install cors
+
+# 2 — Seed the database
+npm run seed
+
+# 3 — Start the server
+npm run dev
+```
+
+Then hit these URLs in Postman or browser:
+```
+# Health check
+GET http://localhost:5000/api/health
+
+# Global only (no client/location)
+GET http://localhost:5000/api/config?environment=production
+
+# With location (gets India override)
+GET http://localhost:5000/api/config?environment=production&location=india
+
+# Full resolution (enterprise client gets 20s timeout)
+GET http://localhost:5000/api/config?environment=production&location=india&clientId=enterprise-client-1
