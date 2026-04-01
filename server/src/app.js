@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const configRoutes = require("./api/routes/config.routes");
 const healthRoutes = require("./api/routes/health.routes");
+const adminRoutes = require("./api/routes/admin.routes");
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(express.json());
 // Routes
 app.use("/api/config", configRoutes);
 app.use("/api/health", healthRoutes);
+app.use("/api/admin", adminRoutes);
 
 // 404 handler
 app.use((req, res) => {
