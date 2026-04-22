@@ -15,7 +15,7 @@ const start = async () => {
   initWebSocket(server);
 
   server.listen(PORT, () => {
-    console.log(`🚀 ConfigPulse server running on http://localhost:${PORT}`);
+    console.log(`ConfigPulse server running on http://localhost:${PORT}`);
   });
 };
 
