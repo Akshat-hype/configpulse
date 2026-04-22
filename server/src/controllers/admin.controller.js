@@ -38,7 +38,7 @@ const updateConfig = async (req, res) => {
       data: updated 
     });
   } catch (error) {
-    console.error("❌ Config update error:", error.message);
+    console.error("Config update error:", error.message);
     return res.status(500).json({ 
       success: false, 
       message: "Failed to update config" 

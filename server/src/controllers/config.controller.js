@@ -26,7 +26,7 @@ const fetchConfig = async (req, res) => {
     });
 
   } catch (error) {
-    console.error("❌ Config fetch error:", error.message);
+    console.error("Config fetch error:", error.message);
     return res.status(500).json({
       success: false,
       message: "Failed to resolve configuration",
